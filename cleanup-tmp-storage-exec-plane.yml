@@ -1,6 +1,6 @@
 ---
 - name: A simple play to clean up tmp directory
-  hosts: myhost
+  hosts: all
   become: true
   tasks:
     - name: Remove /tmp/storage-run-1002/containers
