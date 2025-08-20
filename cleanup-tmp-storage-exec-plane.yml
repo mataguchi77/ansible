@@ -1,0 +1,14 @@
+---
+- name: A simple play to clean up tmp directory
+  hosts: myhost
+  become: true
+  tasks:
+    - name: Remove /tmp/storage-run-1002/containers
+      ansible.builtin.file:
+        path: /tmp/storage-run-1002/containers
+        state: absent
+
+    - name: Remove /tmp/storage-run-1002/libpod/tmp
+      ansible.builtin.file:
+        path: /tp/storage-run-1002/libpod/tmp
+        state: absent
