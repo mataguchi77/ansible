@@ -1,0 +1,11 @@
+---
+- name: Create Organization
+  hosts: localhost
+  connection: local
+  gather_facts: false
+  tasks:
+    - name: Create Organization
+      awx.awx.organization:
+        name: Satellite
+        state: present
+        validate_certs: false
