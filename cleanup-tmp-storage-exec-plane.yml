@@ -1,7 +1,7 @@
 ---
 - name: A simple play to clean up tmp directory
-  hosts: all
-  become: true
+  hosts: localhost
+  connection: local
   tasks:
     - name: Remove /tmp/storage-run-1002/containers
       ansible.builtin.file:
