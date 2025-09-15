@@ -12,7 +12,3 @@
       ansible.builtin.file:
         path: /tp/storage-run-1002/libpod/tmp
         state: absent
-
-    - name: display default ipv4 address
-      ansible.builtin.debug:
-        msg: "{{ ansible_default_ipv4.address }}"
