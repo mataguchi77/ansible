@@ -6,8 +6,9 @@
   pre_tasks:
     - name: Include vars from platform_configs directory
       ansible.builtin.include_vars:
-        dir: ./yaml
-        ignore_files: [controller_config.yml.template]
+        dir: ./var
         extensions: ["yml"]
-  roles:
-    - {role: infra.aap_configuration.controller_organizations, when: aap_organizations is defined}
+  tasks:
+    - name: cac tasks
+      ansible.builtin.import_role:
+        name: infra.aap_controller.dispatcher

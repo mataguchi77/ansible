@@ -1,0 +1,4 @@
+---
+aap_organizations:
+- name: Org1
+  description: "This is Organization 1"
