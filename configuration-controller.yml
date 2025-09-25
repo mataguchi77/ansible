@@ -5,7 +5,7 @@
   tasks:
     - name: Include vars from configs directory
       ansible.builtin.include_vars:
-        dir: .var
+        dir: vars/
         extensions: [yml]
       tags:
         - always
