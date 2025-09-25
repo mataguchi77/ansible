@@ -1,3 +1,0 @@
-controller_roles: "{{ contorller_organizations }}"
-
-contorller_organizations: "{{aap_organizations}}"
